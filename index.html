@@ -1,47 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LogicGate AI Lab</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogicGate AI Lab</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        h1, h2, h3 {
+            color: #212529;
+            font-weight: 600;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+            text-decoration: none;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            padding: 15px 0;
+            border-bottom: 1px solid #e9ecef;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #212529;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: #343a40;
+            color: #fff;
+            text-align: center;
+            padding: 100px 20px;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .hero p {
+            font-size: 1.2em;
+            color: #adb5bd;
+            max-width: 700px;
+            margin: 0 auto 30px auto;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 60px 0;
+            border-bottom: 1px solid #e9ecef;
+        }
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.2em;
+        }
+        
+        /* Projects Section */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+        .project-card {
+            background: #ffffff;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 30px;
+            text-align: left;
+            display: flex;
+            flex-direction: column;
+        }
+        .project-card h3 {
+            margin-top: 0;
+            font-size: 1.8em;
+        }
+        .project-card .status {
+            display: inline-block;
+            padding: 5px 10px;
+            font-size: 0.9em;
+            border-radius: 15px;
+            background-color: #ffc107;
+            color: #333;
+            margin-bottom: 15px;
+            align-self: flex-start;
+        }
+        .project-card p {
+            flex-grow: 1;
+        }
+        .project-card .btn-container {
+             margin-top: 30px; 
+             text-align: center;
+        }
+
+        /* About Section */
+        .about-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.1em;
+        }
+
+        /* Footer */
+        footer {
+            background: #343a40;
+            color: #adb5bd;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 450px) {
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-  <header class="bg-white shadow p-6">
-    <h1 class="text-3xl font-bold text-center">LogicGate AI Lab</h1>
-  </header>
+<body>
 
-  <main class="max-w-4xl mx-auto mt-12 px-6">
-    <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Projects in Progress</h2>
-      <ul class="space-y-4">
-        <li class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-bold">AI Financial Advisor</h3>
-          <p class="text-gray-600">Smart investment advisor, simulated stock trading, quantitative learning.</p>
-        </li>
-        <li class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-bold">Open Cleaning Robot</h3>
-          <p class="text-gray-600">Open source educational projects suitable for teaching artificial intelligence and robotics.</p>
-        </li>
-        <li class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-bold">Smart Glove Project</h3>
-          <p class="text-gray-600">A translator glove for sign language.</p>
-        </li>
-      </ul>
-    </section>
-        <section class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Open Source Applications</h2>
-      <ul class="space-y-4">
-        <li class="bg-white p-4 rounded-lg shadow">
-          <h3 class="text-lg font-bold">Open Private Diary</h3>
-          <p class="text-gray-600">For those who want a tree hole, this is a perfect easy but practical diary system, safe and private.</p>
-        </li>
-      </ul>
-    </section>
-  </main>
+    <header>
+        <div class="container">
+            <div class="logo">LogicGate AI Lab</div>
+            <nav>
+                <a href="#projects">Projects</a>
+                <a href="#about" style="margin-left: 20px;">About</a>
+            </nav>
+        </div>
+    </header>
 
-  <footer class="text-center text-sm text-gray-500 py-6">
-    © 2025 LogicGate AI Lab. All rights reserved.
-  </footer>
+    <section class="hero">
+        <h1>Welcome to LogicGate AI Lab</h1>
+        <p>We are dedicated to building data-driven, intelligent systems to solve complex real-world problems.</p>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>AI Financial Advisor</h3>
+                    <div class="status">Status: In Development</div>
+                    <p>
+                        A data-driven, personalized intelligent investment advisory system. It provides a full-chain service—from market insight and stock analysis to personalized advice—empowering investors to make smarter decisions.
+                    </p>
+                    <div class="btn-container">
+                        <a href="https://github.com/LogicGate-AI-Lab/AI_Financial_Advisor" class="btn" target="_blank">View Project</a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h3>A.L.I.C.E. Project</h3>
+                    <div class="status">Status: In Development</div>
+                    <p>
+                        A project creating a virtual world where AI agents with unique "souls" (memory, goals, ego) interact with each other and human players. The project serves as a long-term stress test of agent behavior and societal rules.
+                    </p>
+                    <div class="btn-container">
+                        <a href="https://github.com/jeffliulab/ALICE_PROJECT" class="btn" target="_blank">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About The Lab</h2>
+            <div class="about-content">
+                <p>
+                    LogicGate AI Lab was founded with the mission to explore and harness the power of artificial intelligence. Our projects embody our commitment to creating practical, impactful tools that leverage data science and machine learning to provide real-world value and explore the frontiers of interactive entertainment.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 LogicGate AI Lab. All Rights Reserved.</p>
+        </div>
+    </footer>
+
 </body>
 </html>
