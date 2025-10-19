@@ -1,91 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html lang="zh-Hans">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Agent Web Operation Challenge</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 20px;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        .container {
-            max-width: 800px;
-            margin: auto;
-            background: #fff;
-            padding: 20px 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1, h2 {
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-        }
-        .lang-section {
-            margin-bottom: 40px;
-        }
-        ol {
-            padding-left: 20px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .contact-info {
-            margin-top: 20px;
-            font-weight: bold;
-        }
-        code {
-            background-color: #eee;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-family: "Courier New", Courier, monospace;
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LogicGate AI</title>
+  <meta name="color-scheme" content="light dark" />
+  <style>
+    :root{ --bg:#ffffff; --fg:#111827; }
+    @media (prefers-color-scheme: dark){ :root{ --bg:#0b1220; --fg:#e5e7eb; } }
+    html,body{ height:100%; margin:0; }
+    body{ background:var(--bg); color:var(--fg); font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC"; line-height:1.6; }
+    main{ display:grid; place-items:center; min-height:100%; padding:24px; }
+    .wrap{ max-width: 920px; width:100%; font-size: clamp(18px, 2.2vw, 24px); }
+    p{ margin:0 0 18px; }
+  </style>
 </head>
 <body>
-
-    <div class="container">
-        <h1>Seeking for talent who can build Web Manipulationg AI Agent</h1>
-
-        <div class="lang-section">
-            <h2>基准测试</h2>
-            <p>我们的团队正在攻克一个可以撬开中国百亿市场的技术难题，如果你正在开发擅长进行web操作的AI agent，可以尝试让你的agent完成以下任务：</p>
-            <p>测试内容就是让agent通过下列prompt来打开正确的网页：</p>
-            <ol>
-                <li>打开测试网站，网址是：<code>https://jeffliulab.com/testbase</code></li>
-                <li>选择个体工商户登陆</li>
-                <li>输入用户名：<code>admin</code></li>
-                <li>输入密码：<code>admin</code></li>
-                <li>点击验证码的“I'm not a robot”，等待验证区变成通过后</li>
-                <li>点击登陆</li>
-            </ol>
-            <p class="contact-info">
-                如果您的AI Agent可以通过上述prompt并打开写有“YOU HAVE PASSED THE FIRST TEST.”的页面，请联系我：<code>jeff.pang.liu@gmail.com</code> 或者微信：<code>mrliu1914</code>
-            </p>
-        </div>
-
-        <div class="lang-section">
-            <h2>Base Test</h2>
-            <p>Our team is tackling a technical challenge that could unlock a multi-billion dollar market in China. If you're developing an AI agent specialized in web operations, you can try having your agent complete the following tasks:</p>
-            <p>The test content is to use agent to do task with following prompts:</p>
-            <ol>
-                <li>Open website: <code>https://jeffliulab.com/testbase</code></li>
-                <li>Choose "个体工商户" to login</li>
-                <li>Input "用户名"：<code>admin</code></li>
-                <li>Input "密码"：<code>admin</code></li>
-                <li>Click verification “I'm not a robot”, Wait for the verification area to show "Passed". If there are more tests, follow the instructions.</li>
-                <li>Click "登陆"</li>
-            </ol>
-            <p class="contact-info">
-                If your AI agent passes the above prompt and reaches the page that says "YOU HAVE PASSED THE FIRST TEST," please contact me at: <code>jeff.pang.liu@gmail.com</code> or WeChat: <code>mrliu1914</code>
-            </p>
-        </div>
-
+  <main>
+    <div class="wrap">
+      <p lang="zh-Hans">LogicGate AI致力于帮助小微企业及个体户的记账报税等财务问题。</p>
+      <p lang="en">LogicGate AI is dedicated to helping small and micro businesses and self-employed individuals with financial issues such as bookkeeping and tax filing.</p>
     </div>
-
+  </main>
 </body>
 </html>
